@@ -1,25 +1,33 @@
 # ANY-UI
 
-<p align="center" height="370">
-<img align="center" height="370" src="./logo.png">
+<p align="center" height="256">
+<img align="center" height="256" src="./public/logo2.png">
 </p>
 
-> 一套用于构建现代 Web 应用的开源设计敏捷方案
+<div align="center">
+
+一套用于构建现代 Web 应用的开源设计敏捷方案
+
+<img alt="" src="https://img.shields.io/github/actions/workflow/status/5unnywind/any-ui/npm-ci.yml?style=for-the-badge&labelColor=000000">
+<a href="https://www.npmjs.com/package/@any_ui/core">
+  <img alt="npm (scoped)" src="https://img.shields.io/npm/v/@any_ui/core?style=for-the-badge&labelColor=000000">
+</a>
+</div>
 
 <br/>
 
 ## Quick Start
 
 ```bash
-npm i any-ui
+npm i @any_ui/core
 # or
-yarn add any-ui
+yarn add @any_ui/core
 # or
-pnpm add any-ui
+pnpm add @any_ui/core
 ```
 
 ```js
-import { Button } from "any-ui";
+import { Button } from "@any_ui/core";
 
 export default () => (
   <>
@@ -33,8 +41,8 @@ export default () => (
 
 ## Documentation
 
-- [中文文档](https://any-ui.ncuos.com/)
-- [Document Site](https://any-ui.ncuos.com/en-US)
+- [中文文档](https://any-ui-5unnywind.vercel.app/)
+- [Document Site](https://any-ui-5unnywind.vercel.app//en-US)
 
 <br/>
 
@@ -50,17 +58,20 @@ pnpm dev
 ## 项目结构
 
 ```
-├── components # 组件源码
-├── docs # 指南文档
-├── src # 各组件文档源码
 ├── package.json # 项目配置
+├── components # 组件源码
+├── docs # 指引文档
+├── src # 各组件文档源码
+├── build_config # 打包组件用到的配置
 ……
 ```
 
 ## 发布
-推送到 mian 分支后，会自动发布
 
-<br/>
+- 要发布文档，只需 push 到 main 分支。
+- 要发布组件，请执行`pnpm chore [版本号]`, 例如`pnpm chore 0.1.5`,脚本会自动更新`package.json`并打`tag`并 push，确认无误后手动用相应的 tag create release 即可自动集成到 npm。
+
+...
 
 ## LICENSE
 
